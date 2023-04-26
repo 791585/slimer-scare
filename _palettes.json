@@ -1,0 +1,28 @@
+{
+    "nextPaletteID": 1,
+    "palettes": {
+        "custom0": {
+            "id": "custom0",
+            "name": "ghosbusters",
+            "colors": [
+                "#000000",
+                "#FFFFFF",
+                "#9534F7",
+                "#F731D6",
+                "#F7E700",
+                "#000000",
+                "#248F0E",
+                "#8CF75E",
+                "#9C8E7F",
+                "#35303A",
+                "#AE030C",
+                "#9E6D52",
+                "#304A94",
+                "#FE8146",
+                "#FC5341",
+                "#FF7BAE"
+            ],
+            "custom": true
+        }
+    }
+}
