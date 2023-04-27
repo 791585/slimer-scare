@@ -10,7 +10,9 @@
         "README.md",
         "assets.json",
         "images.g.jres",
-        "images.g.ts"
+        "images.g.ts",
+        "tilemap.g.jres",
+        "tilemap.g.ts"
     ],
     "testFiles": [
         "test.ts"
@@ -32,12 +34,12 @@
         "#000000",
         "#248F0E",
         "#8CF75E",
-        "#9C8E7F",
-        "#35303A",
+        "#EBC489",
+        "#C0A682",
         "#AE030C",
         "#9E6D52",
         "#304A94",
-        "#FE8146",
+        "#858585",
         "#FC5341",
         "#FF7BAE"
     ]
