@@ -157,7 +157,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     projectile = sprites.createProjectileFromSprite(assets.image`myImage`, mySprite, -90, 0)
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-	
+    projectile = sprites.createProjectileFromSprite(assets.image`myImage`, mySprite, 90, 0)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite, location) {
     info.changeScoreBy(1)
