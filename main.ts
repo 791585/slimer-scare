@@ -1,3 +1,8 @@
+controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (mySprite.isHittingTile(CollisionDirection.Bottom)) {
+        mySprite.vy += -200
+    }
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile6`, function (sprite, location) {
     scene.setBackgroundImage(assets.image`lobby`)
     tiles.setCurrentTilemap(tilemap`level`)
