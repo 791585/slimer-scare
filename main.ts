@@ -19,6 +19,9 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile15`, function (sprite, 
     info.changeLifeBy(-1)
     tiles.setTileAt(location, assets.tile`transparency16`)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile24`, function (sprite, location) {
+    game.gameOver(true)
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile13`, function (sprite, location) {
     info.changeLifeBy(-1)
     tiles.setTileAt(location, assets.tile`transparency16`)
@@ -31,9 +34,12 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile4`, function (sprite, l
     info.changeScoreBy(1)
     tiles.setTileAt(location, assets.tile`transparency16`)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile25`, function (sprite, location) {
+    scene.setBackgroundImage(assets.image`end`)
+    tiles.setCurrentTilemap(tilemap`level8`)
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile12`, function (sprite, location) {
     info.changeLifeBy(-1)
-    tiles.setTileAt(location, assets.tile`transparency16`)
     tiles.setTileAt(location, assets.tile`transparency16`)
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -44,8 +50,8 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile9`, function (sprite, l
     info.changeScoreBy(1)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile18`, function (sprite, location) {
-    myEnemy = sprites.create(assets.image`myImage1`, SpriteKind.Player)
     info.changeLifeBy(-1)
+    tiles.setTileAt(location, assets.tile`transparency16`)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile16`, function (sprite, location) {
     info.changeLifeBy(-1)
@@ -64,6 +70,14 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile8`, function (sprite, l
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile5`, function (sprite, location) {
     scene.setBackgroundImage(assets.image`HOT DOG STAND`)
     tiles.setCurrentTilemap(tilemap`level2`)
+})
+info.onLifeZero(function () {
+    game.gameOver(false)
+    game.setGameOverScoringType(game.ScoringType.HighScore)
+})
+scene.onOverlapTile(SpriteKind.Enemy, assets.tile`myTile18`, function (sprite, location) {
+    info.changeLifeBy(-1)
+    tiles.setTileAt(location, assets.tile`transparency16`)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile10`, function (sprite, location) {
     scene.setBackgroundImage(assets.image`roof`)
@@ -85,8 +99,8 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile14`, function (sprite, 
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile11`, function (sprite, location) {
     info.changeLifeBy(-1)
+    tiles.setTileAt(location, assets.tile`transparency16`)
 })
-let myEnemy: Sprite = null
 let projectile: Sprite = null
 let mySprite: Sprite = null
 mySprite = sprites.create(assets.image`slimer`, SpriteKind.Player)
